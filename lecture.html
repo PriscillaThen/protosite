@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lecture 5: Responsive Design</title>
+</head>
+<body>
+    <header>
+        <section class="left">
+            <p class="caps">British Columbia Institute of Technology Computing - Part-Time Studies</p>
+            <p><span class="caps">Comp</span> 1950: Web Design & Development 2</p>
+        </section>
+
+        <section class="right">
+            <h1>Lectures</h1>
+            <ol>
+                <li>Tools & Standards</li>
+                <li>HTML5</li>
+                <li>Responsive CSS</li>
+                <li>CSS3</li>
+                <li>Javascript Fundamentals</li>
+                <li>Dynamic Content</li>
+                <li>Templating, SEO</li>
+                <li>Methodology</li>
+                <li>Project Work</li>
+            </ol>
+        </section>
+    </header>
+
+    <main>
+        <div>
+            <h1>Lecture 5: <strong>Print Styles & Responsive Design</strong></h1>
+        </div>
+
+        <section class="printers">
+            <h2>Styling for Printers</h2>
+            <h4>Applying Printer Styles</h4>
+            <p>When linking to your CSS, using <code>media="print"</code> will allow printer friendly styles to be applied. If you wanted the printer styles to inherit your default styles, use <code>media="all"</code> with the default stylesheets :
+            </p>
+            <p><code>< !-- This will apply both stylesheets to the printout -- ></code>
+                <code>< link rel="stylesheet" href="default_styles.css" media="all" /></code>
+                <code>< link rel="stylesheet" href="print_styles.css" media="print" /></code></p>
+            <h3>Hiding Elements</h3>
+            <p>Hide the elements you don't want printed. This should include any regions of the page that provide no value to a printout. This may or may not include:</p>
+
+            <p>
+                <ul>
+                    <li>navigation links, navigation bars</li>
+                    <li>headers</li>
+                    <li>footers</li>
+                    <li>background images</li>
+                    <li>any areas that require user interaction, eg: search fields, login forms, etc</li>
+                    <li>side bars, advertisements, banner images</li>
+                </ul>
+            </p>
+
+            <p>Use <code>display:none;</code> to tell the printer to ignore any of the elements listed in the declaration. Be careful to make sure that none of the elements that are ignored have valuable info in them.
+            </p>
+
+            <p>
+                <code>
+                    header, nav, .site_map_link, #search_form{
+                    display: none;
+                    }
+                </code>
+            </p>
+
+            <h3>Restyling Layout</h3>
+            <p>After hiding the content you dont want to be printed, remaining content will either have no style at all, or will inherit the styles of any sheets with "ALL" as the media. For this reason, it is important to explicitly style the remaining divs</p>
+
+            <p>
+                <code>
+                    body, #content, main, footer  {
+                    /* floating is not advised for printers */
+                    float: none;
+                    /* let the printer set margins */
+                    width: auto;
+                    margin: 0;
+                    padding: 0;
+                    /* dont display background colors or images */
+                    background: none;
+                    }
+                </code>
+            </p>
+
+            <ul>
+                <li>The float property is NOT well supported by printers, using it for print stylesheets is not advised</li>
+                <li>Consider removing any width or padding restrictions, allowing the printer to set the margins for each page</li>
+                <li>If you are using this sheet with another stylesheet that has ALL listed as the value for media, you might want to add !important with each rule, to be sure that there will be no inheritance problems</li>
+                <li>Having a rule like background: none; is good if you use backgrounds, or if you don't. If you do, they're gone, if you don't - consider it future-proofing.</li>
+            </ul>
+
+            <h3>Printout Page Control</h3>
+
+            <p>Optional, but useful rules can control where page breaks will or won't appear...</p>
+
+            <ul>
+                <li>Don't allow a page heading to be at the bottom of a page
+                   <code> h2, h2, h4, h5, h6{ page-break-after: avoid; }</code>
+                </li>
+
+                <li>Ensure important page regions begin on a new page
+                    <code>section, article{ page-break-before: always; }</code>
+                </li>
+            </ul>
+        </section>
+
+        <section class="summary">
+            <h2>Summary</h2>
+            <h4>Styling for Print</h4>
+            <ul>
+                <li>use the <code>media="print"</code> attribute or <code>@media print{ }</code> to assign print styles</li>
+                <li>hide navigations, background images, any content that is not useful to a printout</li>
+                <li>dont use 'float' positioning</li>
+                <li>apply the <code>:after</code> pseudoclass to fully-quanlified hyperlinks and print the link address with <code>content: " (URL: ' attr(href) ') ";</code></li>
+            </ul>
+
+            <h4>Media Queries</h4>
+            <ul>
+                <li>Use media queries to apply breakpoints whenever your layout does not display optimally Format:</li>
+                <code>@media TYPE and (FEATURE: VALUE) { CSS rules go here }</code>
+                <li>W3C CSS Media Queries</li>
+                <li>features</li>
+                <li>media query logic</li>
+                <li>Ensure your media queries identify high-resolution small devices appropriately by adding the following inside the <code>< head></code>:</li>
+                <code><meta name="viewport" content="initial-scale=1.0, width=device-width" /></code>
+            </ul>
+
+            <h4>Responsive Design</h4>
+            <ul>
+                <li>Build fluid, flexible layouts. For small devices, use a one column stack, with the most important page elements (such as a vertical navigation) top most.</li>
+                <li>Best Practices: <a href="">Smashing Magazine Guidelines and Tutorials</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <aside>
+        <section class="agenda">
+            <h1>Lecture 5 Agenda</h1>
+            <ul>
+                <li>Quiz #4</li>
+                <li>Print Media</li>
+                <li>Media Queries</li>
+                <li>Responsive Design</li>
+            </ul>
+        </section>
+
+        <section class="references">
+            <h1>References</h1>
+            <ul>
+                <li>W3C Content Property</li>
+                <li>W3C Media Queries</li>
+                <li>Media Queries Browser Support Chart</li>
+                <li>Responsive Web Design</li>
+                <li>Foundation</li>
+                <li>Skeleton</li>
+                <li>Columnal</li>
+                <li>Suzy</li>
+                <li>960.gs</li>
+                <li>Smashing Magazine Guidelines & Tutorials</li>
+            </ul>
+        </section>
+
+        <section class="exercises">
+            <h1>Exercises & Examples</h1>
+            <ul>
+                <li>Print Styles exercise</li>
+                <li>Media Query example</li>
+                <li>Responsive Font & Image example</li>
+                <li>Fluid Fonts & Images</li>
+                <li>Responsive Layouts exercise</li>
+            </ul>
+        </section>
+
+        <section class="homework">
+            <h1>Homework Assignment #5</h1>
+            <ul>
+                <li>Due by midnight before session #7 (there will be no new homework session #6)</li>
+                <li>Worth twice as much as other homework assignments</li>
+                <li>Homework specifications will be available here for download upon release. check back later for an active download link</li>
+                <li><a href="">Download the homework</a></li>
+            </ul>
+        </section>
+    </aside>
+
+    <footer>
+        <section>
+            <h5>Validators</h5>
+            <ul>
+                <li>W3C HTML Validator</li>
+                <li>W3C CSS Validator</li>
+            </ul>
+
+            <h5>Broswer-Based<br>Diagnostic&nbsp;Tools</h5>
+            <li>Firefox Firebug</li>
+            <li>Chrome</li>
+            <li>Safari</li>
+            <li>Internet Explorer</li>
+        </section>
+
+        <section>
+            <h5>Web Browsers</h5>
+            <ul>
+                <li>Chrome</li>
+                <li>Safari</li>
+                <li>Mozilla Firefox</li>
+                <li>Internet Explorer</li>
+                <li>Opera</li>
+                <li>Webbie</li>
+                <li>Web Broswer Evaluator</li>
+            </ul>
+        </section>
+
+        <section>
+            <h5>HTML Text Editors</h5>
+            <ul>
+                <li>HTML Kit</li>
+                <li>EditPlus</li>
+                <li>Notepad++</li>
+            </ul>
+
+            <h5>Popular IDEs</h5>
+            <ul>
+                <li>Sublime Text</li>
+                <li>PHP Storm</li>
+                <li>Text Wrangler</li>
+            </ul>
+        </section>
+
+        <section>
+            <h5>About the Course</h5>
+            <ul>
+                <li>Course Format</li>
+                <li>Evaluation</li>
+                <li>Course Requirements</li>
+                <li>Cirriculum Overview</li>
+            </ul>
+
+            <h5>Instructor</h5>
+            <ul>
+                <li>Jeff Parker</li>
+            </ul>
+        </section>
+
+        <section>
+            <h5>Associated Links</h5>
+            <ul>
+                <li>my.bcit.ca</li>
+                <li>Students on bcitcomp.ca</li>
+                <li>Applied Web Development</li>
+                <li>BCIT Computing</li>
+                <li>BCIT Homepage</li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>
