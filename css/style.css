@@ -112,13 +112,13 @@ main section h3 {
     color: #ECF0F1;
 }
 
-main section.printers h2 {      /*Section Title*/
+main section.lectures h2 {      /*Section Title*/
     background-color: #2B3E50;
     color: #ECF0F1;
     width: 100%;
 }
 
-main section.printers h3 {
+main section.lectures h3 {
     font-size: 1em;
     margin: 0;
     padding: .4em 2em;
@@ -127,14 +127,43 @@ main section.printers h3 {
     color: #ECF0F1;
 }
 
-main section.printers h4 {
+main section.lectures h4 {
     margin: 0;
     padding: 1em 2em .5em;
     background-color: #85AED4; /*Light Blue*/
     width: 100%;
 }
 
-main section.printers p {
+main section.lectures p {
+    margin: 0;
+    padding: 1em 2em .5em;
+    width: 100%;
+    background-color: #85AED4; /*Light Blue*/
+}
+
+main section.home h2 {      /*Section Title*/
+    background-color: #2B3E50;
+    color: #ECF0F1;
+    width: 100%;
+}
+
+main section.home h3 {
+    font-size: 1em;
+    margin: 0;
+    padding: .4em 2em;
+    width: 100%;
+    background-color: #3D6286; /*Medium Blue*/
+    color: #ECF0F1;
+}
+
+main section.home h4 {
+    margin: 0;
+    padding: 1em 2em .5em;
+    background-color: #85AED4; /*Light Blue*/
+    width: 100%;
+}
+
+main section.home p {
     margin: 0;
     padding: 1em 2em .5em;
     width: 100%;
@@ -147,7 +176,7 @@ code {
     padding: .2em;
 }
 
-main section.printers ul {
+main section.lectures ul {
     background-color: #85AED4;
     margin: 0;
     padding-left: 4em;
@@ -155,7 +184,18 @@ main section.printers ul {
     width: 100%;
 }
 
-main section.printers ul li {
+main section.lectures ul li {
+    padding-bottom: .7em;
+}
+main section.home ul {
+    background-color: #85AED4;
+    margin: 0;
+    padding-left: 4em;
+    padding-bottom: 1em;
+    width: 100%;
+}
+
+main section.home ul li {
     padding-bottom: .7em;
 }
 
@@ -195,7 +235,34 @@ main section.summary ul {
  main section.summary code {
     background-color: #C4574A; /*Murky Red for Code*/
 }
-
+/*
+CONTACT
+*/
+input {
+	border: 1px solid #666666; 
+}
+#message {
+	width:90%;
+	height:100px;
+}
+button {
+	border: 1px solid #666666;
+	background-color: white;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:4px;
+	padding-bottom:4px;
+}
+/*
+QUIZZES
+*/
+#q1,#q2,#q4{
+	width:90%;
+	height:50px;
+}
+#q3 {
+	width:200px;
+}
 /*
 RIGHT COLUMN [ASIDE]
 */
