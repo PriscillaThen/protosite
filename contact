@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lecture 5: Responsive Design</title>
+</head>
+<body>
+    <header>
+        <section class="left">
+            <p class="caps">British Columbia Institute of Technology Computing - Part-Time Studies</p>
+            <p><span class="caps">Comp</span> 1950: Web Design & Development 2</p>
+        </section>
+
+        <section class="right">
+            <h1>Lectures</h1>
+            <ol>
+                <li>Tools & Standards</li>
+                <li>HTML5</li>
+                <li>Responsive CSS</li>
+                <li>CSS3</li>
+                <li>Javascript Fundamentals</li>
+                <li>Dynamic Content</li>
+                <li>Templating, SEO</li>
+                <li>Methodology</li>
+                <li>Project Work</li>
+            </ol>
+        </section>
+    </header>
+
+    <main>
+        <div>
+            <h1>Lecture 5: <strong>Print Styles & Responsive Design</strong></h1>
+        </div>
+
+        <section class="home">
+            <h2>Contact</h2>
+            <h4>Email</h4>
+			<p><a href='mailto:jeffrey_parker@bcit.ca'>jeffrey_parker@bcit.ca</a></p>
+			<h4>Send me a message</h4>
+			<p>First Name: <input type='text' name='fname'></p>
+			<p>Last Name: &nbsp;<input type='text' name='lname'></p>
+			<p>Message</p>
+			<p><input id='message' type='textarea' name='message'></p>
+			<p><button type='submit'>Send</button></p>
+			<p></p>
+        </section>
+    </main>
+
+    <aside>
+        
+    </aside>
+
+    <footer>
+        <section>
+            <h5>Validators</h5>
+            <ul>
+                <li>W3C HTML Validator</li>
+                <li>W3C CSS Validator</li>
+            </ul>
+
+            <h5>Broswer-Based<br>Diagnostic&nbsp;Tools</h5>
+            <li>Firefox Firebug</li>
+            <li>Chrome</li>
+            <li>Safari</li>
+            <li>Internet Explorer</li>
+        </section>
+
+        <section>
+            <h5>Web Browsers</h5>
+            <ul>
+                <li>Chrome</li>
+                <li>Safari</li>
+                <li>Mozilla Firefox</li>
+                <li>Internet Explorer</li>
+                <li>Opera</li>
+                <li>Webbie</li>
+                <li>Web Broswer Evaluator</li>
+            </ul>
+        </section>
+
+        <section>
+            <h5>HTML Text Editors</h5>
+            <ul>
+                <li>HTML Kit</li>
+                <li>EditPlus</li>
+                <li>Notepad++</li>
+            </ul>
+
+            <h5>Popular IDEs</h5>
+            <ul>
+                <li>Sublime Text</li>
+                <li>PHP Storm</li>
+                <li>Text Wrangler</li>
+            </ul>
+        </section>
+
+        <section>
+            <h5>About the Course</h5>
+            <ul>
+                <li>Course Format</li>
+                <li>Evaluation</li>
+                <li>Course Requirements</li>
+                <li>Cirriculum Overview</li>
+            </ul>
+
+            <h5>Instructor</h5>
+            <ul>
+                <li>Jeff Parker</li>
+            </ul>
+        </section>
+
+        <section>
+            <h5>Associated Links</h5>
+            <ul>
+                <li>my.bcit.ca</li>
+                <li>Students on bcitcomp.ca</li>
+                <li>Applied Web Development</li>
+                <li>BCIT Computing</li>
+                <li>BCIT Homepage</li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>
