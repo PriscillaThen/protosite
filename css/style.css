@@ -1,21 +1,27 @@
 /*
 COMP 1950 Final Project - Website Redesign, Dec. 9, 2015
-*/
-
-/*
 GENERAL
 */
 body {
-    background-color: #ECF0F1;
-    font-family: "Source sans pro", Helvetica, sans-serif;
+    width: 100%;
+    background-color: rgb(236, 240, 241);
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
 }
 
-.left {
-    float: left;
+.wrapper {
+    display: flex;
+    flex-direction: row;
 }
 
-.right {
-    float: right;
+.container {
+    width: 65%;
+    margin-right: 1.2em;
+    flex: 2.5;
+}
+
+.sidebar {
+    width: 35%;
+    flex: 1;
 }
 
 .caps {
@@ -26,407 +32,441 @@ body {
 TOP HEADER: BCIT, COURSE NAME & LECTURE TOPICS
 */
 header {
-    color: #3698DB;
-    padding: 0;
-    margin-bottom: 10px;
+    width: 100%;
+    height: 85px;
     font-weight: 700;
+    padding: 10px 2em;
     line-height: .5em;
+    box-sizing: border-box;
+    color: rgb(54, 152, 219);
+    background-color: rgb(42, 61, 79);
 }
 
-header section.left {
-    background-color: #2B3E50;
-    width: 68%;
-    float: left;
-    padding: 0 2em .25em;
-    margin: 0;
+header a:link, header a:visited, header a:active {
+    color: rgb(55, 147, 220);
 }
 
-header section.right {      /*LECTURES BUTTON*/
-    width: 23%;
-    float: right;
-    padding: 0 20px 5px;
-    margin-bottom: 10px;
-}
-
-header section.right h1 {     /*LECTURES BUTTON*/
-    background-color: #2B3E50;
-    font-size: 1.5em;
-    text-align: center;
-    margin: 0;
-    padding: 30px 20px;
-}
-
-#lectures a:link, #lectures a:visited {
-    color: #ECF0F1;
+header a:hover {
     text-decoration: none;
+    color: rgb(251, 210, 77);
 }
-
-#lectures a:hover, #lectures a:active {
-    color: #FFD34E;
-    /*text-decoration: underline;*/
-}
-
-header ol {                     /*WEEKLY LECTURES*/
-    background-color: #2B80B9;
-    color: #ECF0F1;
-    margin: 0;
-    padding: 1em 1em 1em 4em;
-    font-size: .8em;
-}
-
-header ol li a:link, header ol li a:visited {
-    color: #ECF0F1;
-    text-decoration: none;
-}
-
-header ol li a:hover, header ol li a:active {
-    color: #FFD34E;
-    text-decoration: underline;
-}
-
-
-header ol li {                  /*WEEKLY LECTURES*/
-    line-height: 1.75em;
-}
-
 
 /*
 MAIN CONTENT
 */
 main {
-    width: 68%;
-    float: left;
+    margin: 0;
+    max-width: 100%;
 }
 
 main section {
+    width: 100%;
+    margin: 1em 0;
     padding-bottom: 2em;
 }
 
 /*
 MAIN CONTENT - 1st SECTION
 */
-main div h1 {               /*Main Page Title*/
+main h1 { /*Main Page Title*/
     color: white;
-    background-color: #E74C3B;
-    padding: 0.7em 1em;
     margin: .3em 0;
-    width: 100%;
+    padding: 0.7em 1em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: rgb(231, 76, 59);
 }
 
-main section h2 {      /*Section Title - General*/
-    width: 100%;
+main section * {
+    line-height: 1.8em;
+    box-sizing: border-box;
+}
+
+main section {
+    background-color: rgb(133, 174, 212);
+}
+
+main section h2 { /*Section Title - General*/
     margin: 0;
-    padding: .5em 1.55em;
     font-size: 1.3em;
+    padding: .5em 1.55em;
+    text-transform: uppercase;
+    color: rgb(236, 240, 241);
+    background-color: rgb(43, 62, 80);
 }
 
 main section h3 {
+    margin: 0;
+    width: 100%;
     font-size: 1em;
-    margin: 0;
     padding: .4em 2em;
-    width: 100%;
-    background-color: #3D6286;
-    color: #ECF0F1;
+    color: rgb(236, 240, 241);
+    background-color: rgb(61, 98, 134);
 }
 
-main section.lectures h2 {      /*Section Title*/
-    background-color: #2B3E50;
-    color: #ECF0F1;
-    width: 100%;
-}
-
-main section.lectures h3 {
-    font-size: 1em;
+main section h4 {
     margin: 0;
-    padding: .4em 2em;
     width: 100%;
-    background-color: #3D6286; /*Medium Blue*/
-    color: #ECF0F1;
-}
-
-main section.lectures h4 {
-    margin: 0;
     padding: 1em 2em .5em;
-    background-color: #85AED4; /*Light Blue*/
-    width: 100%;
+    background-color: rgb(133, 174, 212);
 }
 
-main section.lectures p {
+main section p {
     margin: 0;
+    width: 100%;
     padding: 1em 2em .5em;
-    width: 100%;
-    background-color: #85AED4; /*Light Blue*/
 }
 
-main section.home h2 {      /*Section Title*/
-    background-color: #2B3E50;
-    color: #ECF0F1;
-    width: 100%;
-}
-
-main section.home h3 {
-    font-size: 1em;
+main section ul {
     margin: 0;
-    padding: .4em 2em;
     width: 100%;
-    background-color: #3D6286; /*Medium Blue*/
+    padding-left: 4em;
+    padding-bottom: 1em;
+}
+
+main ul li {
+    padding-bottom: .7em;
+}
+
+main section code, main section pre {
     color: #ECF0F1;
+    padding: .2em .4em;
+    background-color: rgb(43, 128, 185);
 }
 
-main section.home h4 {
-    margin: 0;
-    padding: 1em 2em .5em;
-    background-color: #85AED4; /*Light Blue*/
-    width: 100%;
+/*
+MAIN HOME
+*/
+main section {
+    background-color: rgb(43, 62, 80);
 }
 
-main section.home p {
-    margin: 0;
-    padding: 1em 2em .5em;
-    width: 100%;
-    background-color: #85AED4; /*Light Blue*/
+main .home h2 { /*Section Title*/
+    color: rgb(236, 240, 241);
+    background-color: rgb(43, 62, 80);
 }
 
-code {
-    background-color: #2B80B9;
-    color: #ECF0F1;
-    padding: .2em;
+main .home h3 {
+    color: rgb(236, 240, 241);
+    background-color: rgb(61, 98, 134);
 }
 
-main section.lectures ul {
-    background-color: #85AED4;
+main .home h4, main .home {
+    background-color: rgb(133, 174, 212);
+}
+
+main .home ul {
     margin: 0;
     padding-left: 4em;
     padding-bottom: 1em;
-    width: 100%;
-}
-
-main section.lectures ul li {
-    padding-bottom: .7em;
-}
-main section.home ul {
-    background-color: #85AED4;
-    margin: 0;
-    padding-left: 4em;
-    padding-bottom: 1em;
-    width: 100%;
-}
-
-main section.home ul li {
-    padding-bottom: .7em;
+    background-color: rgb(133, 174, 212);
 }
 
 /*
 MAIN CONTENT - 2nd SECTION --> FOR JAMIE TO DO
 */
+main .media-queries {
+    background-color: rgb(245, 223, 158);
+}
 
+main .media-queries h2 { /*Section Title*/
+    color: rgb(34, 91, 100);
+    background-color: rgb(251, 210, 77);
+}
+
+main .media-queries h3 {
+    color: inherit;
+    background-color: transparent;
+}
+
+main .media-queries h4, main .media-queries p {
+    margin: 0;
+    width: 100%;
+    color: inherit;
+    padding: 1em 2em .5em;
+    background-color: transparent;
+}
+
+main .media-queries ul {
+    margin: 0;
+    width: 100%;
+    padding-left: 4em;
+    padding-bottom: 1em;
+}
 
 /*
 MAIN CONTENT - 3rd SECTION --> FOR JAMIE TO DO
 */
+main .responsive {
+    background-color: rgb(159, 211, 215);
+}
 
+main .responsive h2 {
+    color: rgb(255, 253, 223);
+    background-color: rgb(34, 91, 100);
+}
+
+main .responsive h3 {
+    color: inherit;
+    background-color: transparent;
+}
+
+main .responsive h4, main .responsive p {
+    margin: 0;
+    width: 100%;
+    padding: 1em 2em .5em;
+}
+
+main .responsive ul {
+    margin: 0;
+    width: 100%;
+    padding-left: 4em;
+    padding-bottom: 1em;
+}
 
 /*
 MAIN CONTENT - SUMMARY --> FOR JAMIE TO DO
 */
-main section.summary h2 {      /*Section Title*/
-    background-color: #E74C3B;
-    color: #ECF0F1;
+main .summary {
+    background-color: rgb(233, 108, 95);
 }
 
-main section.summary h4, main section.summary p {
-    background-color: #E96D5F;
+main .summary h2 {
+    color: rgb(255, 246, 216);
+    background-color: rgb(231, 75, 58);
+}
+
+main .summary h4, main .summary p {
     margin: 0;
-    padding: 1em 2em .5em;
     width: 100%;
+    color: inherit;
+    padding: 1em 2em .5em;
+    background-color: transparent;
 }
 
-main section.summary ul {
-    background-color: #E96D5F;
+main .summary ul {
     margin: 0;
+    width: 100%;
     padding-left: 4em;
     padding-bottom: 1em;
-    width: 100%;
 }
 
- main section.summary code {
-    background-color: #C4574A; /*Murky Red for Code*/
+main .summary code, main .summary pre {
+    background-color: rgb(196, 87, 74);
 }
+
 /*
 CONTACT
 */
 input {
-	border: 1px solid #666666; 
+    border: 1px solid rgb(102, 102, 102);
 }
-#message {
-	width:90%;
-	height:100px;
+
+textarea {
+    width: 90%;
+    height: 100px;
 }
+
 button {
-	border: 1px solid #666666;
-	background-color: white;
-	padding-left:10px;
-	padding-right:10px;
-	padding-top:4px;
-	padding-bottom:4px;
+    padding: 4px 10px;
+    background-color: white;
+    border: 1px solid rgb(102, 102, 102);
 }
+
 /*
 QUIZZES
 */
-#q1,#q2,#q4{
-	width:90%;
-	height:50px;
+#q1, #q2, #q4 {
+    width: 90%;
+    height: 50px;
 }
+
 #q3 {
-	width:200px;
+    width: 200px;
 }
+
 /*
 RIGHT COLUMN [ASIDE]
 */
 aside {
+    flex: 1;
     width: 25%;
-    float: right;
+}
+
+aside section {
+    margin: 0 0 1em;
 }
 
 aside h1 {
-    font-size: 1.2em;
-    padding: .25em 2em;
+    margin: 0;
+    padding: 0;
+    height: 85px;
+    font-size: 1.3em;
+    line-height: 85px;
+    text-align: center;
+    color: rgb(43, 128, 185);
+    text-transform: uppercase;
 }
 
 aside li, aside p {
-    font-size: .8em;
-    padding-bottom: .75em;
+    font-size: 1.2em;
+    line-height: 2em;
 }
 
-aside section.agenda h1 {
-    background-color: #E74C3B;
-    color: #ECF0F1;
+/*
+ASIDE LECTURES
+*/
+aside .lectures h1 {
+    background-color: rgb(43, 62, 80);
+}
+
+aside .lectures a:link, aside .lectures a:visited {
+    text-decoration: none;
+    color: rgb(236, 240, 241);
+}
+
+aside .lectures a:hover, aside .lectures a:active {
+    color: rgb(255, 211, 78);
+}
+
+aside .lectures ol {
     margin: 0;
-    /*padding: .4em;*/
+    padding: 1em 1em 1em 4em;
+    color: rgb(236, 240, 241);
+    background-color: rgb(43, 128, 185);
 }
 
-aside section.agenda ul {
-    background-color: #E96D5F;
+aside .lectures ol li a:link, aside .lectures ol li a:visited {
+    text-decoration: none;
+    color: rgb(236, 240, 241);
+}
+
+aside .lectures ol li a:hover, aside .lectures ol li a:active {
+    color: rgb(255, 211, 78);
+    text-decoration: underline;
+}
+
+/*
+ASIDE AGENDA
+*/
+aside .agenda h1 {
+    margin: 0;
+    color: rgb(236, 240, 241);
+    background-color: rgb(231, 76, 59);
+}
+
+aside .agenda ul {
+    margin: 0;
     color: white;
-    margin: 0;
     padding: .5em 4em;
-}
-
-aside section.references {
-    margin-top: 1em;
-    color: #2B80B9; /*Medium Blue*/
-}
-
-aside section.references h1 {
-    background-color: #FFD34E; /*Strong Yellow*/
-    margin: 0;
-}
-
-aside section.references ul {
-    background-color: #FDE392; /*Soft Yellow*/
-    margin: 0;
-    padding: .5em 4em;
+    background-color: rgb(233, 109, 95);
 }
 
 /*
-EXERCISES & EXAMPLES
+ASIDE REFERENCES
 */
-aside section.exercises {
-    color: #ECF0F1;
+
+aside .references {
     margin-top: 1em;
+    color: rgb(43, 128, 185);
 }
 
-aside section.exercises h1 {
-    background-color: #30696F;
+aside .references h1 {
+    margin: 0;
+    background-color: rgb(255, 211, 78);
+}
+
+aside .references ul {
+    margin: 0;
+    padding: .5em 4em;
+    background-color: rgb(253, 227, 146);
+}
+
+aside .references a:link, aside .references a:visited {
+    text-decoration: none;
+    color: rgb(43, 128, 185);
+}
+
+aside .references a:hover, aside .references a:active {
+    color: rgb(43, 62, 80);
+    text-decoration: underline;
+}
+
+/*
+ASIDE EXERCISES
+*/
+aside .exercises {
+    margin-top: 1em;
+    color: rgb(236, 240, 241);
+}
+
+aside .exercises h1 {
+    margin: 0;
     padding: .4em 2em;
-    margin: 0;
+    background-color: rgb(48, 105, 111);
 }
 
-aside section.exercises ul {
-    background-color: #6D9498;
-    margin: 0;
-    padding: .5em 4em;
-}
-
-aside section.homework {
-    margin-top: 1em;
-}
-
-aside section.homework h1 {
-    background-color: #E74C3B; /*Bright Red*/
-    color: #ECF0F1; /*Off-white*/
-    margin: 0;
-}
-
-aside section.homework ul {
-    background-color: #E96D5F; /*Light Red*/
-    color: black;
+aside .exercises ul {
     margin: 0;
     padding: .5em 4em;
+    background-color: rgb(109, 148, 152);
+}
+
+aside .exercises a:link, aside .exercises a:visited {
+    text-decoration: none;
+}
+
+aside .exercises a:hover, aside .exercises a:active {
+    text-decoration: underline;
 }
 
 /*
-LINKS - ASIDE
+ASIDE HOMEWORK
 */
-a:link {
-    color: #ECF0F1;
-    font-weight: 700;
+aside .homework {
+    margin-top: 1em;
 }
 
-a:visited {
-    color: #2B3E50;
+aside .homework h1 {
+    margin: 0;
+    color: rgb(236, 240, 241);
+    background-color: rgb(231, 76, 59);
 }
 
-a:hover, a:active {
-    color: #FFD34E;
-    font-weight: 700;
+aside .homework ul {
+    margin: 0;
+    color: black;
+    padding: .5em 4em;
+    background-color: rgb(233, 109, 95);
 }
 
-.references a:link, .references a:visited {
-    color: #2B80B9; /*  'References' links in medium blue*/
-    text-decoration: none;
-}
-
-.references a:hover, .references a:active {
-    color: #2B3E50;
-    text-decoration: underline;
-}
-
-.exercises a:link, .exercises a:visited {
-    text-decoration: none;
-}
-
-.exercises a:hover, .exercises a:active {
-    text-decoration: underline;
-}
 /*
 FOOTER
 */
-/*COLUMN 1 - VALIDATORS & DIAGNOSTIC TOOLS*/
 footer {
-    display: inline-block;
-    width: 100%;
-    background-color: #2B3E50;
-    margin-top: 3em;
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
     padding: 0 3em 2em;
+    background-color: rgb(43, 62, 80);
 }
 
 footer section {
+    flex: 1;
     width: 19%;
-    display: inline-block;
-    vertical-align: top;
 }
 
 footer h5 {
-    color: #4CA6B0; /*Turquoise*/
+    margin: 2.5em 0 .8em;
+    color: rgb(76, 166, 176);
     text-transform: uppercase;
-    margin: 2.5em 0 0;
 }
 
 footer ul {
     margin: 0;
     padding: 0;
-    font-size: .9em;
+    font-size: 1em;
 }
 
 footer li {
@@ -435,11 +475,11 @@ footer li {
 }
 
 footer li a:link, footer li a:visited {
-    color: #9AC5C9; /*Pale Turquoise*/
     text-decoration: none;
+    color: rgb(154, 197, 201);
 }
 
 footer li a:hover, footer li a:active {
-    color: #FFD34E;
+    color: rgb(255, 211, 78);
     text-decoration: underline;
 }
