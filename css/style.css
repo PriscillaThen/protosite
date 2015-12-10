@@ -75,21 +75,12 @@ header ol {                     /*WEEKLY LECTURES*/
     padding-left: 4em;
     font-size: .8em;
 }
-<<<<<<< HEAD
 
 header ol li a:link, header ol li a:visited {
     color: #ECF0F1;
     text-decoration: none;
 }
 
-=======
-
-header ol li a:link, header ol li a:visited {
-    color: #ECF0F1;
-    text-decoration: none;
-}
-
->>>>>>> 73961c66f44cd1ea2bb7509f6536094f38a7c0e6
 header ol li a:hover, header ol li a:active {
     color: #FFD34E;
     text-decoration: underline;
