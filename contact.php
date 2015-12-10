@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lecture 5: Responsive Design</title>
 </head>
 <body>
