@@ -1,5 +1,5 @@
 /*
-COMP 1950 Final Project - Website Redesign, Dec. 2015
+COMP 1950 Final Project - Website Redesign, Dec. 9, 2015
 */
 
 /*
@@ -57,6 +57,16 @@ header section.right h1 {     /*LECTURES BUTTON*/
     padding: 30px 20px;
 }
 
+#lectures a:link, #lectures a:visited {
+    color: #ECF0F1;
+    text-decoration: none;
+}
+
+#lectures a:hover, #lectures a:active {
+    color: #FFD34E;
+    /*text-decoration: underline;*/
+}
+
 header ol {                     /*WEEKLY LECTURES*/
     background-color: #2B80B9;
     color: #ECF0F1;
@@ -64,12 +74,30 @@ header ol {                     /*WEEKLY LECTURES*/
     padding: 1em;
     padding-left: 4em;
     font-size: .8em;
-
 }
+<<<<<<< HEAD
+
+header ol li a:link, header ol li a:visited {
+    color: #ECF0F1;
+    text-decoration: none;
+}
+
+=======
+
+header ol li a:link, header ol li a:visited {
+    color: #ECF0F1;
+    text-decoration: none;
+}
+
+>>>>>>> 73961c66f44cd1ea2bb7509f6536094f38a7c0e6
+header ol li a:hover, header ol li a:active {
+    color: #FFD34E;
+    text-decoration: underline;
+}
+
 
 header ol li {                  /*WEEKLY LECTURES*/
     line-height: 1.75em;
-
 }
 
 
@@ -365,6 +393,23 @@ a:hover, a:active {
     font-weight: 700;
 }
 
+.references a:link, .references a:visited {
+    color: #2B80B9; /*  'References' links in medium blue*/
+    text-decoration: none;
+}
+
+.references a:hover, .references a:active {
+    color: #2B3E50;
+    text-decoration: underline;
+}
+
+.exercises a:link, .exercises a:visited {
+    text-decoration: none;
+}
+
+.exercises a:hover, .exercises a:active {
+    text-decoration: underline;
+}
 /*
 FOOTER
 */
@@ -397,6 +442,15 @@ footer ul {
 
 footer li {
     list-style: none;
-    color: #9AC5C9; /*Pale Turquoise*/
     line-height: 2em;
+}
+
+footer li a:link, footer li a:visited {
+    color: #9AC5C9; /*Pale Turquoise*/
+    text-decoration: none;
+}
+
+footer li a:hover, footer li a:active {
+    color: #FFD34E;
+    text-decoration: underline;
 }
