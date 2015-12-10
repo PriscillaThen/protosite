@@ -27,7 +27,6 @@ TOP HEADER: BCIT, COURSE NAME & LECTURE TOPICS
 */
 header {
     color: #3698DB;
-    padding: 20px 30px;
     padding: 0;
     margin-bottom: 10px;
     font-weight: 700;
@@ -71,8 +70,7 @@ header ol {                     /*WEEKLY LECTURES*/
     background-color: #2B80B9;
     color: #ECF0F1;
     margin: 0;
-    padding: 1em;
-    padding-left: 4em;
+    padding: 1em 1em 1em 4em;
     font-size: .8em;
 }
 
